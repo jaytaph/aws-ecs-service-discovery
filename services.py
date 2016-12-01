@@ -19,9 +19,9 @@ import os
 import re
 import boto
 
-ecs = boto.connect_ec2containerservice()
-ec2 = boto.connect_ec2()
-route53 = boto.connect_route53()
+ecs = boto.connect_ec2containerservice(host='ecs.eu-central-1.amazonaws.com')
+ec2 = boto.connect_ec2(host='ecs.eu-central-1.amazonaws.com')
+route53 = boto.connect_route53(host='ecs.eu-central-1.amazonaws.com')
 
 logging.basicConfig(format='%(asctime)s %(message)s',
                     datefmt='%Y/%m/%d/ %I:%M:%S %p')
